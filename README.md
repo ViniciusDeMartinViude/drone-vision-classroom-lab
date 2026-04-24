@@ -120,3 +120,8 @@ The dataset includes short and long flights, with a mix of 720p, vertical video,
 The detailed classroom sequence is in [activities/sequence.md](/F:/dev/drone/activities/sequence.md).
 The classroom challenge pack is in [activities/challenges/challenge_sequence.md](/F:/dev/drone/activities/challenges/challenge_sequence.md).
 The teacher walkthrough PDF is in [activities/challenges/Teacher_Step_by_Step_Tutorial.pdf](/F:/dev/drone/activities/challenges/Teacher_Step_by_Step_Tutorial.pdf).
+
+## References
+
+The student API reference is in [activities/challenges/Student_NumPy_OpenCV_Reference.pdf](/F:/dev/drone/activities/challenges/Student_NumPy_OpenCV_Reference.pdf).
+The teacher API reference is in [activities/challenges/Teacher_NumPy_OpenCV_Reference.pdf](/F:/dev/drone/activities/challenges/Teacher_NumPy_OpenCV_Reference.pdf).
