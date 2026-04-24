@@ -44,6 +44,22 @@ conda activate cardd-paper-demo
 python -m drone_lab.main --help
 ```
 
+## Installing Without Conda
+
+If you do not want to use the original conda environment, install the required packages with:
+
+```powershell
+pip install -r F:\dev\drone\requirements.txt
+```
+
+The requirements file includes:
+
+- `numpy`
+- `opencv-python`
+- `reportlab`
+
+`reportlab` is used for generating the classroom PDFs. The drone lab itself mainly depends on `numpy` and `opencv-python`.
+
 ## Project layout
 
 ```text
