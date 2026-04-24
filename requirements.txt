@@ -1,0 +1,4 @@
+# Core packages used by the drone lab and the PDF generators.
+numpy>=1.26,<3
+opencv-python>=4.8,<5
+reportlab>=4.0,<5
