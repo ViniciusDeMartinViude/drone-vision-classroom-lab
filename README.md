@@ -1,8 +1,16 @@
 # Drone Vision Lab with OpenCV and NumPy
 
-This project turns prerecorded drone videos into a classroom-friendly drone lab. Students work with OpenCV and NumPy now, while using a structure that mirrors how the same system would later be split into ROS 2 nodes, topics, and control loops.
+This repository is a classroom-ready drone vision lab for teaching OpenCV, NumPy, class-based Python design, and robotics architecture without needing a real drone. Students use prerecorded flight videos as a simulated onboard camera and build the same kinds of modules they will later meet in ROS 2: camera, telemetry, perception, control, and mission logic.
 
-The videos live in `F:\datasets\drone` and are treated as the drone's camera feed. Some DJI clips also include `.SRT` telemetry files, which we use as mock sensor data.
+The video dataset location is configured by the teacher in [video_config.py](/F:/dev/drone/activities/challenges/video_config.py) or with the `DRONE_VIDEO_DIR` environment variable. Some DJI clips also include `.SRT` telemetry files, which are used as mock sensor data.
+
+## Repository overview
+
+- `teachers` branch: full instructor version with solutions, teacher notes, and printable PDFs
+- `students` branch: starter-code version without solutions
+- `main` branch: base project snapshot
+
+This setup makes it easy to distribute unfinished exercises to students while keeping the worked solutions in a separate teaching branch.
 
 ## Learning goals
 
@@ -50,14 +58,16 @@ activities/
 ## Quick start
 
 1. Add `src` to the Python path.
-2. Run one of the scenarios below.
+2. Configure the teacher video folder.
+3. Run one of the scenarios below.
 
 PowerShell:
 
 ```powershell
 $env:PYTHONPATH = "F:\dev\drone\src"
+$env:DRONE_VIDEO_DIR = "D:\course_materials\drone_videos"
 conda activate cardd-paper-demo
-python -m drone_lab.main --scenario teleop --video "F:\datasets\drone\DJI_0790.MOV"
+python -m drone_lab.main --scenario teleop --video "$env:DRONE_VIDEO_DIR\DJI_0790.MOV"
 ```
 
 ### Scenarios
@@ -109,3 +119,9 @@ The dataset includes short and long flights, with a mix of 720p, vertical video,
 
 The detailed classroom sequence is in [activities/sequence.md](/F:/dev/drone/activities/sequence.md).
 The classroom challenge pack is in [activities/challenges/challenge_sequence.md](/F:/dev/drone/activities/challenges/challenge_sequence.md).
+The teacher walkthrough PDF is in [activities/challenges/Teacher_Step_by_Step_Tutorial.pdf](/F:/dev/drone/activities/challenges/Teacher_Step_by_Step_Tutorial.pdf).
+
+## References
+
+The student API reference is in [activities/challenges/Student_NumPy_OpenCV_Reference.pdf](/F:/dev/drone/activities/challenges/Student_NumPy_OpenCV_Reference.pdf).
+The teacher API reference is in [activities/challenges/Teacher_NumPy_OpenCV_Reference.pdf](/F:/dev/drone/activities/challenges/Teacher_NumPy_OpenCV_Reference.pdf).
