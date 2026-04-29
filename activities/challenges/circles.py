@@ -164,8 +164,8 @@ def student_controller(frame):
     # Students can improve this logic.
     k = 1
 
-    ax = 0
-    ay = 0
+    ax = dx * k
+    ay = dy * k
 
     ax = clamp(ax, -MAX_ACCELERATION, MAX_ACCELERATION)
     ay = clamp(ay, -MAX_ACCELERATION, MAX_ACCELERATION)
